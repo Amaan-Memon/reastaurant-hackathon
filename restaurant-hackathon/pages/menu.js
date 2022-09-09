@@ -1,9 +1,10 @@
 import React from 'react'
 import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer/Footer'
+import {data} from '../libs/dummyData'
 
-const Menu = ({ data}) => {
-  console.log(data.results)
+const Menu = () => {
+  console.log(data.name)
   return (
     <>
     <Header />

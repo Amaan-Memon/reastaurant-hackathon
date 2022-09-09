@@ -3,9 +3,14 @@ import {Header} from "../components/Header/Header";
 import {Footer} from "../components/Footer/Footer";
 import { ItemCard } from "../components/ItemCard/ItemCard";
 import { Content } from "../components/Content/Content";
+import {data} from '../libs/dummyData'
 
 
-const ItemContainer = Styled.div`
+export const ItemContainer = Styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
 
 `;
 const PageContainer = Styled.div`
@@ -14,13 +19,15 @@ const PageContainer = Styled.div`
 const ContentContainer = Styled.div`
 
 `;
-export default function Home({data}) {
-  console.log(data);
+export default function Home() {
+  ;
   return (
     <PageContainer>
       <Header />
       <ItemContainer>
-        <ItemCard />
+      {data.map((item) => (
+        <ItemCard key={item.id} data={item} />
+      ))}
       </ItemContainer>
       <ContentContainer>
         <Content/>
