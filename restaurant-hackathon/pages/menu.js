@@ -1,9 +1,15 @@
 import React from 'react'
+import { Header } from '../components/Header/Header'
+import { Footer } from '../components/Footer/Footer'
 
 const Menu = ({ data}) => {
   console.log(data.results)
   return (
+    <>
+    <Header />
     <div>Menu</div>
+    <Footer />
+    </>
   )
 }
 export async function getServerSideProps() {
