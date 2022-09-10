@@ -17,7 +17,8 @@ color: white;
 `;
 
 const Title = Styled.h1`
-fontFamily: Lato;
+font-family: Lato;
+font-size: 2rem;
 text-transform: uppercase;
 text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
 0px 0px 20px #b393d3;
