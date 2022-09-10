@@ -23,8 +23,7 @@ const ItemImage = Styled.img`
   height: 19.5rem;
   z-index: -1;
   border-radius: 20px;
-  
-
+  object-fit: cover;
 `;
 
 const ItemDataContainer = Styled.div`
@@ -43,6 +42,7 @@ bottom: 0;
 background-color: rgba(0, 0, 0, 0.5);
 width: 100%;
 height: 30%;
+border-radius: 20px;
 `
 
 const ItemName = Styled.h1`
@@ -67,22 +67,22 @@ const ItemPrice = Styled.h2`
 
 const AddItemContainer = Styled.div`
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   color: white;
   font-size:large;
   bottom: 0.5rem; 
   right 1rem;
 `;
 
-export const ItemCard = (data) => {
+export const ItemCard = ({ data, onClickOrder }) => {
   return (
     <Item>
-      <ItemImage src="/Korean-Fried-Chicken.webp" />
+      <ItemImage src={`${data.image}`} />
       <Opacity>
       <ItemDataContainer>
-      <ItemName>Korean Fried Chicken</ItemName>
-      <ItemPrice>£7.00</ItemPrice>
-      <AddItemContainer>
+      <ItemName>{data.title}</ItemName>
+      <ItemPrice>£{Math.round(data.pricePerServing/10)}</ItemPrice>
+      <AddItemContainer onClick={onClickOrder}>
         <AddIcon fontSize="large"/>
       </AddItemContainer>
       </ItemDataContainer>

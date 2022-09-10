@@ -23,7 +23,7 @@ text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
 0px 0px 20px #b393d3;
 `;
 
-export const Header = () => {
+export const Header = ({ onClick, numberOfOrders}) => {
   return (
     <HeaderContainer>
       <ItemHolder>
@@ -32,8 +32,8 @@ export const Header = () => {
       </div>
       <Title>K-Chick</Title>
       <ItemHolder >
-      <ShoppingCartIcon style={{ fontSize: 50 }}/>
-      <p style={{ fontSize: 12 }}>(1)</p>
+      <ShoppingCartIcon onClick={onClick} style={{ fontSize: 50 }}/>
+      <p style={{ fontSize: 12 }}>({numberOfOrders})</p>
       </ItemHolder>
       </ItemHolder>
     </HeaderContainer>
