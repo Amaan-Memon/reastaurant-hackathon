@@ -13,17 +13,27 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
+color: white;
+`;
+
+const Title = Styled.h1`
+fontFamily: Lato;
+text-transform: uppercase;
+text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
+0px 0px 20px #b393d3;
 `;
 
 export const Header = () => {
   return (
     <HeaderContainer>
       <ItemHolder>
-      <Image src="/southKoreaFlag.png" height={60} width={120}></Image>
-      <h1>K-Chick</h1>
+      <div style={{borderRadius: '10px', overflow: 'hidden'}}>
+      <Image src="/southKoreaFlag.png" height={80} width={120}></Image>
+      </div>
+      <Title>K-Chick</Title>
       <ItemHolder >
       <ShoppingCartIcon style={{ fontSize: 50 }}/>
-      <p style={{ fontSize: 10 }}>(1)</p>
+      <p style={{ fontSize: 12 }}>(1)</p>
       </ItemHolder>
       </ItemHolder>
     </HeaderContainer>

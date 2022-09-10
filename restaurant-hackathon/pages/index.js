@@ -10,27 +10,27 @@ export const ItemContainer = Styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
-
+  justify-content:space-around;
+  width: 100%;
 `;
 const PageContainer = Styled.div`
 
 `;
 const ContentContainer = Styled.div`
-
+padding: 2rem;
+min-height: 80vh;
 `;
 export default function Home() {
   ;
   return (
     <PageContainer>
       <Header />
+      <ContentContainer>
       <ItemContainer>
       {data.map((item) => (
         <ItemCard key={item.id} data={item} />
       ))}
       </ItemContainer>
-      <ContentContainer>
-        <Content/>
       </ContentContainer>
       <Footer />
     </PageContainer>

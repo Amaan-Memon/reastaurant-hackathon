@@ -37,6 +37,14 @@ const ItemDataContainer = Styled.div`
   z-index: 1;
   `;
 
+const Opacity = Styled.div`
+position: absolute;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.5);
+width: 100%;
+height: 30%;
+`
+
 const ItemName = Styled.h1`
   position: absolute;
   bottom: 2rem;
@@ -70,6 +78,7 @@ export const ItemCard = (data) => {
   return (
     <Item>
       <ItemImage src="/Korean-Fried-Chicken.webp" />
+      <Opacity>
       <ItemDataContainer>
       <ItemName>Korean Fried Chicken</ItemName>
       <ItemPrice>£7.00</ItemPrice>
@@ -77,6 +86,7 @@ export const ItemCard = (data) => {
         <AddIcon fontSize="large"/>
       </AddItemContainer>
       </ItemDataContainer>
+      </Opacity>
     </Item>
   );
 };
